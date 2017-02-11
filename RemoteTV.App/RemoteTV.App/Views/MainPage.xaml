@@ -14,7 +14,7 @@
       <Button Text="Git" Clicked="Button_Clicked" />
     </StackLayout>
     <Grid Grid.Row="1">
-      <WebView x:Name="web" Navigating="Web_Navigating" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+      <WebView x:Name="web" Navigated="Web_Navigated" Navigating="Web_Navigating" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
     </Grid>
   </Grid>
 </ContentPage>

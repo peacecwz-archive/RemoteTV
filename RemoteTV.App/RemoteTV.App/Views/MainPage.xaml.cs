@@ -25,5 +25,20 @@ namespace RemoteTV.App.Views
         {
             web.Source = txtUrl.Text;
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            if (web.CanGoBack)
+            {
+                web.GoBack();
+                return true;
+            }
+            return base.OnBackButtonPressed();
+        }
+
+        private void Web_Navigated(object sender, WebNavigatedEventArgs e)
+        {
+            txtUrl.Text = e.Url;
+        }
     }
 }
