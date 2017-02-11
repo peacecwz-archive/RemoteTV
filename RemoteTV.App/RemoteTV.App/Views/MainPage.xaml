@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RemoteTV.App.Views.MainPage">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="50" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+
+    <StackLayout Grid.Row="0" Orientation="Horizontal">
+      <Label Text="Adres:" VerticalTextAlignment="Center" />
+      <Entry x:Name="txtUrl" HorizontalOptions="FillAndExpand" Text="https://google.com" />
+      <Button Text="Git" Clicked="Button_Clicked" />
+    </StackLayout>
+    <Grid Grid.Row="1">
+      <WebView x:Name="web" Navigating="Web_Navigating" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+    </Grid>
+  </Grid>
+</ContentPage>
