@@ -36,9 +36,10 @@ namespace RemoteTV.App.Views
             return base.OnBackButtonPressed();
         }
 
-        private void Web_Navigated(object sender, WebNavigatedEventArgs e)
+        private async void Web_Navigated(object sender, WebNavigatedEventArgs e)
         {
             txtUrl.Text = e.Url;
+            await DataClient.Instance.Update(e.Url);
         }
     }
 }
